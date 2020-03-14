@@ -95,9 +95,30 @@ const fs = require('fs');
 // });
 
 
-fs.appendFile('finalexample.txt','\n Ayaz janjua is here and i will make a janjua foundation',(err)=>{
-if(err)
-console.log(err);
-else
-console.log('File Append Successfully');
+// fs.appendFile('finalexample.txt','\n Ayaz janjua is here and i will make a janjua foundation',(err)=>{
+// if(err)
+// console.log(err);
+// else
+// console.log('File Append Successfully');
+// })
+
+// fs.unlink('finalexample.txt',(err)=>{
+// if(err)
+// console.log(err)
+// else
+// console.log('File deleted successfully');
+// })
+
+
+//Folder working
+fs.mkdir('testing',(err) =>{
+    if(err)
+    console.log(err);
+    else
+fs.writeFile('./testing/testingfile.txt','File is testing bro no tension',(err) =>{
+    if(err)
+    console.log(err);
+    else
+    console.log('file created successfully');
+})
 })
