@@ -71,12 +71,33 @@ const EventEmitter = require('events');
 //File Working File
 
 const fs = require('fs');
-fs.writeFile('example.txt','This is just for testing',(arr) =>{
+// fs.writeFile('example.txt','This is just for testing',(arr) =>{
 
-    if(arr)
-console.log(arr);
-    else
-        console.log('File Created Successfuly!!!');
+//     if(arr)
+// console.log(arr);
+//     else
+//     console.log('File Created Successfully');
+//       fs.readFile('example.txt','utf8',(err,file) => {
+//         if(err)
+//         console.log(err);
+//         else
+//         console.log(file);
+//       })
     
 
-});
+// });
+
+// fs.rename('testing.txt','finalexample.txt', (err)=>{
+//     if(err)
+//     console.log(err);
+//     else
+//     console.log('File created successfully');
+// });
+
+
+fs.appendFile('finalexample.txt','\n Ayaz janjua is here and i will make a janjua foundation',(err)=>{
+if(err)
+console.log(err);
+else
+console.log('File Append Successfully');
+})
